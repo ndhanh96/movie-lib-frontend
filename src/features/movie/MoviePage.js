@@ -40,7 +40,7 @@ function MoviePage() {
   const checkIfShowInDB = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3001/checkshow?showid=${id}`,
+        `http://randomass.xyz:3001/checkshow?showid=${id}`,
         { withCredentials: true }
       );
       setIsAdded(response.data.isItLiked);
@@ -56,7 +56,7 @@ function MoviePage() {
     try {
       setIsAddingShow(true);
       const response = await axios.post(
-        'http://localhost:3001/addshow/',
+        'http://randomass.xyz:3001/addshow/',
         {
           showid: id,
           format: format,

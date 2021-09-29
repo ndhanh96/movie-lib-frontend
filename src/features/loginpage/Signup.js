@@ -16,7 +16,7 @@ function Signup() {
   const trySignup = async (values) => {
     try {
       const response = await axios.post(
-        'http://localhost:3001/signup',
+        'http://randomass.xyz:3001/signup',
         {
           username: values.username,
           password: values.password,
