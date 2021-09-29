@@ -28,7 +28,7 @@ function MoviePage() {
   const getProgramData = async () => {
     try {
       const response = await axios.get(
-        `https://api.themoviedb.org/3/${format}/${id}?api_key=${process.env.REACT_APP_API_TMDB_KEY}&append_to_response=videos,images`
+        `https://api.themoviedb.org/3/${format}/${id}?api_key=92a2777ea629eeeb7dbc832d18f0caa2&append_to_response=videos,images`
       );
       setProgramData(response.data);
       setImagesPoster([...response.data.images.backdrops])

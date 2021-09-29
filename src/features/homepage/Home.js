@@ -15,7 +15,7 @@ function Home() {
   const getTrending = async (pageNum) => {
     try {
       const response = await axios.get(
-        `https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_API_TMDB_KEY}&page=${pageNum}`
+        `https://api.themoviedb.org/3/trending/all/day?api_key=92a2777ea629eeeb7dbc832d18f0caa2&page=${pageNum}`
       );
       setTrendList([...response.data.results]);
     } catch (error) {
