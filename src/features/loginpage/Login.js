@@ -26,6 +26,7 @@ function Login() {
         }
       );
       dispatch(checkLogin());
+      console.log(response.data)
       if(!response.data.isLogin) {
         wrongPassMesg();
       }
