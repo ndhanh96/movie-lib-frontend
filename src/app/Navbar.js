@@ -100,7 +100,7 @@ function Logout() {
   return (
     <Link
       onClick={async () => {
-        await axios.get('http://randomass.xyz:3001/logout', {
+        await axios.get('https://demo-store-backend.herokuapp.com/logout', {
           withCredentials: true,
         });
         dispatch(checkLogin());

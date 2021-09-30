@@ -16,7 +16,7 @@ function Signup() {
   const trySignup = async (values) => {
     try {
       const response = await axios.post(
-        'http://randomass.xyz:3001/signup',
+        'https://demo-store-backend.herokuapp.com/signup',
         {
           username: values.username,
           password: values.password,

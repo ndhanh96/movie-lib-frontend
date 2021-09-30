@@ -11,7 +11,7 @@ const initialState = {
 
 export const checkLogin = createAsyncThunk('user/checklogin', async () => {
   try {
-    const response = await axios.get('http://randomass.xyz:3001/login', {
+    const response = await axios.get('https://demo-store-backend.herokuapp.com/login', {
       withCredentials: true,
     });
     return response.data;
