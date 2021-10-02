@@ -7,13 +7,12 @@ import { checkLogin } from '../user/userSlice';
 
 import { Row, Col, Form, Input, Button, Checkbox, message } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
-axios.defaults.withCredentials = true;
 
 function Login() {
   const dispatch = useDispatch();
   const isLogin = useSelector((state) => state.user.isLogin);
   const history = useHistory();
-
+ 
   const tryLogin = async (values) => {
     try {
       const response = await axios.post(
@@ -27,8 +26,6 @@ function Login() {
         },
       );
       dispatch(checkLogin());
-      console.log(response.data)
-      console.log(values);
       if(!response.data.isLogin) {
         wrongPassMesg();
       }
